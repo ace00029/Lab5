@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="popup_background">#50958C</color>
+    <color name="loading_screen">#5950958C</color>
 
 </resources>

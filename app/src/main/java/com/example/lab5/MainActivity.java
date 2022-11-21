@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView mealImageIV;
     ListView mealIngredientsLV;
 
+    Button searchButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         this.mealsLV.setAdapter(searchResultsAdapter);
 
         this.edIngredient = findViewById(R.id.edIngredient);
+        this.searchButton = findViewById(R.id.btnDownload);
 
 
         ingredientsAdapter = new ArrayAdapter<Ingredient>(this,
@@ -151,6 +155,8 @@ public class MainActivity extends AppCompatActivity {
     public void onBtnDownloadClick(View view) {
         String ingSelected = (String) this.edIngredient.getText().toString();
         if (!ingSelected.isEmpty()) {
+            this.searchButton.setText(R.string.search_button_loading);
+
             // Check if no view has focus:
             if (view != null) {
                 InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -159,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
             new DataLoader() {
                 @Override
                 public void onPostExecute(Meal[] results) {
+                    searchButton.setText(R.string.search_button);
                     currentMeals = results;
                     listMealsItem.clear();
                     listMealsItem.addAll(getMealsNames(results));

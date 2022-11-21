@@ -4,6 +4,7 @@
 <!--    <string name="activity_participants" translatable="false">Number of participants</string>-->
 <!--    <string name="activity_price" translatable="false">Free activity</string>-->
     <string name="search_button" translatable="false">Propose meal</string>
+    <string name="search_button_loading" translatable="false">Loading...</string>
     <string name="main_title" translatable="false">What do you like to cook with?</string>
     <string name="ingrBox" translatable="false">Write your main ingredient</string>
     <string name="mealName" translatable="false">Meal name</string>
