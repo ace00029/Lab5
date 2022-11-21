@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">Lab5</string>
+    <string name="main_ingredient" translatable="false">Which is your main ingredient?</string>
+<!--    <string name="activity_participants" translatable="false">Number of participants</string>-->
+<!--    <string name="activity_price" translatable="false">Free activity</string>-->
+    <string name="search_button" translatable="false">Propose meal</string>
+    <string name="main_title" translatable="false">What do you like to cook with?</string>
+    <string name="ingrBox" translatable="false">Write your main ingredient</string>
+    <string name="mealName" translatable="false">Meal name</string>
+    <string name="mealCategory" translatable="false">Meal category</string>
+    <string name="mealIngredients" translatable="false">Ingredients:</string>
+    <string name="mealInstructions" translatable="false">Instructions:</string>
+    <string name="not_found" translatable="false">Not found</string>
+
+    <string-array name="selection_options">
+        <item>Chars</item>
+        <item>Words</item>
+    </string-array>
+</resources>

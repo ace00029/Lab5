@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/popup_background"
+    tools:layout_editor_absoluteX="-5dp"
+    tools:layout_editor_absoluteY="0dp">
+
+
+    <TextView
+        android:id="@+id/mealNameTV"
+        android:layout_width="387dp"
+        android:layout_height="34dp"
+        android:text="@string/mealName"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/mealAreaTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/mealAreaTV"
+        android:layout_width="195dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/mealCategory"
+        android:textAlignment="center"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/mealImageIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/mealImageIV"
+        android:layout_width="205dp"
+        android:layout_height="123dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/ingredientsTitleTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/ingredientsTitleTV"
+        android:layout_width="192dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/mealIngredients"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/mealIngredientsLV"
+        app:layout_constraintEnd_toStartOf="@+id/instructionsTitleTV"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/mealIngredientsLV"
+        android:layout_width="183dp"
+        android:layout_height="355dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mealInstructionsTV"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/instructionsTitleTV"
+        android:layout_width="192dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/mealInstructions"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mealImageIV" />
+
+    <TextView
+        android:id="@+id/mealInstructionsTV"
+        android:layout_width="190dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        android:scrollbars="vertical"
+        android:text="@string/mealInstructions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsTitleTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
